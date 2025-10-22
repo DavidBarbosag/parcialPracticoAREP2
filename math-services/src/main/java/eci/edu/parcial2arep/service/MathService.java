@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import org.springframework.stereotype.Service;
+import java.util.*;
 
+@Service
 public class MathService {
     public Map<String, Object> lucasSequence(int value) {
         if(value < 2){
