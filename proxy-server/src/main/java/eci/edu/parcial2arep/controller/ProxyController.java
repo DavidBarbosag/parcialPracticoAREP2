@@ -31,6 +31,4 @@ public class ProxyController {
 
         return restTemplate.getForObject(url, Object.class);
     }
-
-
 }

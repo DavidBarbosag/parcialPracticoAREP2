@@ -16,7 +16,7 @@ public class MathController {
     }
 
     @GetMapping("/lucasseq")
-    public Map<Integer, Object> lucasSequence(@RequestParam int value) {
+    public Map<String, Object> lucasSequence(@RequestParam int value) {
         return mathService.lucasSequence(value);
     }
 }

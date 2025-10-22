@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Proxy Math Service</title>
+</head>
+<body>
+<h2>Math Services Proxy</h2>
+
+<form onsubmit="event.preventDefault();">
+    <label>Valor:</label><br>
+    <input type="text" id="value" placeholder="Ejemplo: 3"><br><br>
+
+    <button type="button" onclick="callService('lucasSequence')">Lucas Sequence</button>
+</form>
+
+<h3>Resultado:</h3>
+<pre id="result"></pre>
+
+<script>
+    async function callService(type) {
+        const value = document.getElementById("value").value.trim();
+
+        if (!value) {
+            document.getElementById("result").textContent = "Ingresar valor";
+            return;
+        }
+
+        try {
+            const response = await fetch(`/api/lucasseq?value=${value}`);
+            if (!response.ok) {
+                throw new Error("Error al contactar el servidor");
+            }
+            const data = await response.text();
+            document.getElementById("result").textContent = data;
+        } catch (error) {
+            document.getElementById("result").textContent = error.message;
+        }
+    }
+</script>
+</body>
+</html>
