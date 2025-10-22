@@ -45,10 +45,16 @@ java -jar math-services-1.0-SNAPSHOT.jar
 
 ## instancias corriendo
 
-### math-serice 1
+### math-service 1
 
 ![img.png](assets/ins2.png)
 
-### math-serice 2
+### math-service 2
 
 ![img.png](assets/math1.png)
+
+## Error
+
+Proxy funcionando, pero hay un error en la cosntruccion del url de las instancias de math services
+
+![img.png](assets/error.png)
