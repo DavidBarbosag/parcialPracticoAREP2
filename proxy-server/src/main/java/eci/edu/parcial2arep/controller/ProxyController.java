@@ -24,7 +24,7 @@ public class ProxyController {
             @RequestParam int value) {
 
         String serviceUrl = getServiceUrl();
-        String url = String.format("%s/?value=%d",
+        String url = String.format("/api/lucasseq?value=%d",
                 serviceUrl, value);
 
         System.out.println("Redirigiendo solicitud a: " + url);
